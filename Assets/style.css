@@ -1,0 +1,55 @@
+
+header {
+    /* padding: 20 px 35px; */
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 50px;
+    display: inline;
+    margin-left: 30px;
+    
+}
+
+header a {
+    text-decoration: none;
+}
+
+input {
+    float: right;
+    margin: 0 50px;
+    width: 300px;
+}
+
+/* button {
+    float: right;
+} */
+
+header nav {
+    float: right;
+    margin: 7 px 0;
+}
+
+header nav ul {
+    display: inline-flexbox;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+header nav ul li{
+    display: inline-block;
+}
+
+header nav ul li a {
+    padding: 50px;
+    font-size: 24px;
+}
+
+#live-score {
+   
+    
+}
+#main-video {
+   
+}
