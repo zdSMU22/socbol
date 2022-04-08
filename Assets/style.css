@@ -1,11 +1,6 @@
-/* html {
-    background-image: url(https://media.istockphoto.com/photos/the-stadium-picture-id959685848?k=20&m=959685848&s=612x612&w=0&h=bAQUuKSxk4xS3AxmQt5Px8VJM7df9pDZg5Q3BqXhulA=);
-    background-size: cover;
-} */
-
 :root {
     --primary: rgb(245, 239, 239);
-    --secondary: rgb
+    --secondary:
 
 }
 
@@ -21,7 +16,7 @@ header h1 {
 header a {
     font-weight: bold; 
     text-decoration: none;
-    color: rgb(206, 14, 14);
+    color: var(--primary);
 }
 
 input {
