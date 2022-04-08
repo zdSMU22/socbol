@@ -1,6 +1,7 @@
 
 header {
     /* padding: 20 px 35px; */
+    z-index: 9999;
 }
 
 header h1 {
@@ -44,6 +45,24 @@ header nav ul li{
 header nav ul li a {
     padding: 50px;
     font-size: 24px;
+}
+
+
+/* video bg style*/
+#videoBg {
+    position: fixed;
+    right:0;
+    bottom:0;
+    min-width: 100%;
+    min-height: 92%;
+    z-index: -1;
+}
+.content {
+    position: fixed;
+    bottom: 0;
+    color: #ffffff; 
+    width:100%;
+    padding: 10px; 
 }
 
 #live-score {
