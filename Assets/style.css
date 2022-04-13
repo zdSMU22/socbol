@@ -84,10 +84,14 @@ header .search:hover {
 }
 
 #live-score {
-   
+    padding: 50px;  
+    overflow:hidden;
+    display: block;
     
 }
+
 #main-video {
+    display: inline-block;
    
 }
 
