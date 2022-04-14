@@ -65,11 +65,33 @@ header .search:hover {
     font: white;
 }
 
+
+/* video bg style*/
+#videoBg {
+    position: fixed;
+    right:0;
+    bottom:0;
+    min-width: 100%;
+    min-height: 92%;
+    z-index: -1;
+}
+.content {
+    position: fixed;
+    bottom: 0;
+    color: #ffffff; 
+    width:100%;
+    padding: 10px; 
+}
+
 #live-score {
-   
+    padding: 50px;  
+    overflow:hidden;
+    display: block;
     
 }
+
 #main-video {
+    display: inline-block;
    
 }
 
