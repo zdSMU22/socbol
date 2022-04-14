@@ -42,11 +42,11 @@
                         <select id="myTeam">
                         <span class="select" id="leagueNames">
                             <option selected>League</option>
-                            <option value="1">Bundesliga</option>
-                            <option value="2">La Liga</option>
-                            <option value="3">Ligue 1</option>
-                            <option value="4">Premier League</option>
-                            <option value="5">Serie A</option> 
+                            <option value="1" data-id="ger.1">Bundesliga</option>
+                            <option value="2" data-id="esp.1">La Liga</option>
+                            <option value="3" data-id="fra.1">Ligue 1</option>
+                            <option value="4" data-id="eng.1">Premier League</option>
+                            <option value="5" data-id="ita.1">Serie A</option> 
                         </span>
                         </select>
                     </p>
@@ -174,27 +174,40 @@
                     </div>
                 </div>
             </div>
-            <!-- Stats and Standing Info -->
+            <!-- Standings -->
             <div class="column">
                 <div class="card standings-info">
                     <div class="card-content standings-content">
-                        HELLO
+                        Standings:<span id="rank"></span>
                     </div>
+                    <div id="videoStandingsId"></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Upcoming Schedule Section -->
-    <div class="card upcoming-schedule" id="schedule">
-        <div class="card-content schedule-info">
-            <h2 class="content">Upcoming Schedule
-                <span id="team"></span>
-            </h2>
-            
+    <!-- Stats  -->
+    <footer class="container">
+    <div class="team-stats" id="stats">
+        <h2 class="content stats-title">Stats for Season:
+        <span id="team"></span>
+        </h2>
+    </div>
+    <div class="stats-info">
+        <div class="columns stats-column">
+            <div class="column">Wins: <span id="wins"></span></div>
+            <div class="column">Losses:<span id="losses"></span></div>
+            <div class="column">Draws:<span id="draws"></span></div>
         </div>
     </div>
-
+    <div class="stats-info">
+        <div class="columns stats-column">
+            <div class="column">Games Played:<span id="games-played"></span></div>
+            <div class="column">Points Per Game:<span id="ppg"></span></div>
+            <div class="column">Overall Record:<span id="record"></span></div>
+        </div>
+    </div>
+    </footer>
     <script src="./Assets/stats.js"></script>
 </body>
 </html>

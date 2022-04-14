@@ -1,8 +1,9 @@
 var video =document.getElementById("videoBg");
 var bgBtn = document.getElementById("myBtn");
-var apiUrlStandings = "/standings?season=2022&sort=asc"
-var premierLeague="eng.1"
-var teamStandings = document.getElementById("team");
+//API league start
+var apiUrl = "https://api-football-standings.azharimm.site/leagues/"
+var apiUrlStandings = "/standings?season=2021&sort=asc"
+//API league End
 var leagueSelect = document.getElementById("myTeam");
 var leagueTeam = document.getElementById("teams");
 var bundTeam = document.querySelectorAll(".bund");
@@ -10,6 +11,8 @@ var laLigaTeam = document.querySelectorAll(".la-liga");
 var ligue1Team = document.querySelectorAll(".ligue-1");
 var premTeam = document.querySelectorAll(".prem");
 var serieATeam = document.querySelectorAll(".serie-a");
+var leagueVideo ="https://www.scorebat.com/video-api/v3/team/"
+var apiToken ="MTY3MzNfMTY0OTk1ODY3M19iNzQ4MzRmYTdlNjBlYmNjYWE5OWFhMDc1MDc5NjJmMWI1ZTgzZTJk";
 
 
 function showTeamBund (team) {
@@ -66,19 +69,37 @@ function showTeamSerieA (team) {
     }   
 }
 
-function getStandings () {
+function showVideo () {
+    var apiLink = leagueVideo + "/real-madrid/?token=" + apiToken
+
+    fetch(apiLink).then(function(response) {
+        if (response.ok) {
+            return response.json().then(function(video){
+                var videoStandings = document.getElementById("videoStandingsId");
+                videoStandings = response;
+            })
+        } else {
+            alert("video does not work")
+        }
+    })
+}
+showVideo();
+function getStandings (leagueId) {
     //format the api url
-    var apiUrl = "https://api-football-standings.azharimm.site/leagues/" + premierLeague + apiUrlStandings;
+    apiUrl + leagueId + apiUrlStandings
 
     //use fetch to make a request to the url 
     fetch(apiUrl).then(function(response) {
         if (response.ok) {
-            return response.json().then(function (response) {
-                teamStandings.innerHTML = response;
+            return response.json().then(function (data) {
+                console.log(data);
             })
+        } else {
+            alert("Error");
         }
-    })
+    });
 }
+
 
 
 function bgVideo () {
@@ -90,12 +111,10 @@ function bgVideo () {
         bgBtn.innerHTML = "Play";
     }
 }
-
 //Event Listeners 
 leagueSelect.addEventListener("change", function (){
     var teamSelect = document.getElementById("team-card");
-    teamSelect.classList.remove("hide");
-    
+    teamSelect.classList.remove("hide");    
     //function for showing team
     showTeamBund(this.value);
     showTeamLaLiga(this.value);
@@ -103,3 +122,13 @@ leagueSelect.addEventListener("change", function (){
     showTeamSerieA(this.value);
     showTeamligue1(this.value);
 })
+
+function leagueChangeHandler (event) {
+    var leagueId = event.target.getAttribute("data-id");
+
+    if(leagueId) {
+        getStandings(leagueId);
+    }
+}
+
+//leagueTeam.addEventListener("change", );
