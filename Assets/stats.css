@@ -39,6 +39,20 @@ select {
     
 }
 
+.league-teams {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.team-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
 .container {
     padding: 80px 0px; 
     margin: 40px;
@@ -48,9 +62,13 @@ select {
     padding: 40px;
 }
 
+.standings-info {
+    padding-bottom: 300px;
+}
 .upcoming-info {
+    padding-bottom: 100px;
     width:80%;
-    height: 100%;
+    height: 87%;
 }
 
 .content-title {
@@ -65,10 +83,15 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 100%;
+    padding-bottom: 80%;
     border-top: 2px solid #000000;
 }
 
 .schedule-info {
     padding: 80px 0;
+}
+
+/* Hide content */
+.hide {
+    display: none; 
 }

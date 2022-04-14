@@ -39,29 +39,145 @@
                 <!-- Search bar -->
                 <div class="field">
                     <p class="control">
-                        <select>
+                        <select id="myTeam">
                         <span class="select">
                             <option selected>League</option>
-                            <option>Bundesliga</option>
-                            <option>La Liga</option>
-                            <option>Ligue 1</option>
-                            <option>Major League Soccer</option>
-                            <option>Premier League</option>
-                            <option>Serie A</option> 
+                            <option value="bundesliga">Bundesliga</option>
+                            <option value="la-liga">La Liga</option>
+                            <option vgalue="ligue-1">Ligue 1</option>
+                            <option value="major-league-soccer">Major League Soccer</option>
+                            <option value="english-premier-league">Premier League</option>
+                            <option value="serie-a">Serie A</option> 
                         </span>
                         </select>
                     </p>
                 </div>
                 <!-- Select team -->
                 <div class="card upcoming-info">
-                    <div class="card-content select-team">
-                        <h2 class="content-title">Select a team to View</h2>
+                    <h2 class="team-title">Select a team to View</h2>
+                    <div class="card-content" id="select-team">
+                        <div class="field league-teams">
+                            <p class="control">
+                                <select id="teams" class="">
+                                    <span class="select">
+                                        <option selected>Choose Team to view standings</option>
+                                        <!-- Bundesliga Teams -->
+                                        <option class="hide bund" id="arminia-b">Arminia B.</option>
+                                        <option class="hide bund" id="augsburgo">Augsburgo</option>
+                                        <option class="hide bund" id="b-dortmund">B. Dortmund</option>
+                                        <option class="hide bund" id="b-mgladbach">B. MGladbach</option>
+                                        <option class="hide bund" id="bayern">Bayern</option>
+                                        <option class="hide bund" id="bochum">Bochum</option>
+                                        <option class="hide bund" id="colonia">Colonia</option>
+                                        <option class="hide bund" id="eintracht-fr">Eintracht Fr.</option>
+                                        <option class="hide bund" id="friburgo">Friburgo</option>
+                                        <option class="hide bund" id="greuther-f&#252;rth">Greuther F&#252;rth</option>
+                                        <option class="hide bund" id="hertha">Hertha</option>
+                                        <option class="hide bund" id="hoffenheim">Hoffenheim</option>
+                                        <option class="hide bund" id="leverkusen">Leverkusen</option>
+                                        <option class="hide bund" id="mainz-05">Mainz 05</option>
+                                        <option class="hide bund" id="rb-leipzig">RB Leipzig</option>
+                                        <option class="hide bund" id="stuttgart">Stuttgart</option>
+                                        <option class="hide bund" id="uni&oacute;n-berlin">Uni&oacute;n Berlin</option>
+                                        <option class="hide bund" id="wolfsburgo">Wolfsburgo</option>
+
+                                        <!-- La Liga Teams -->
+                                        <option class="hide la-liga" id="alaves">Alaves</option>
+                                        <option class="hide la-liga" id="athletico-club">Athletico Club</option>
+                                        <option class="hide la-liga" id="atletico-de-madrid">Atletico De Madrid</option>
+                                        <option class="hide la-liga" id="celta-de-vigo">Celta De Vigo</option>
+                                        <option class="hide la-liga" id="espanyol">Espanyol</option>
+                                        <option class="hide la-liga" id="barcelona">Barcelona</option>
+                                        <option class="hide la-liga" id="sevilla">Sevilla</option>
+                                        <option class="hide la-liga" id="mallorca">Mallorca</option>
+                                        <option class="hide la-liga" id="rayo-vallecano">Rayo Vallecano</option>
+                                        <option class="hide la-liga" id="real-betis">Real Betis</option>
+                                        <option class="hide la-liga" id="real-madrid">Real Madrid</option>
+                                        <option class="hide la-liga" id="real-sociedad">Real Sociedad</option>
+                                        <option class="hide la-liga" id="valencia-cf">Valencia CF</option>
+                                        <option class="hide la-liga" id="villarreal">Villarreal</option>
+                                        <option class="hide la-liga" id="osasuna">Osasuna</option>
+                                        <option class="hide la-liga" id="levante">Levante</option>
+                                        <option class="hide la-liga" id="elche">Elche</option>
+                                        <option class="hide la-liga" id="getafe">Getafe</option>
+                                        <option class="hide la-liga" id="cadiz">Cadiz</option>
+                                        <option class="hide la-liga" id="granada-cf">Granada CF</option>
+
+                                        <!-- Ligue 1 Teams -->
+                                        <option class="hide ligue-1" id="angers">Angers</option>
+                                        <option class="hide ligue-1" id="bordeaux">Bordeaux</option>
+                                        <option class="hide ligue-1" id="clermont">Clermont</option>
+                                        <option class="hide ligue-1" id="lens">Lens</option>
+                                        <option class="hide ligue-1" id="lyon">Lyon</option>
+                                        <option class="hide ligue-1" id="marseille">Marseille</option>
+                                        <option class="hide ligue-1" id="metz">Metz</option>
+                                        <option class="hide ligue-1" id="monaco">Monaco</option>
+                                        <option class="hide ligue-1" id="montpellier">Montpellier</option>
+                                        <option class="hide ligue-1" id="paris-saint-germain">Paris Saint Germain</option>
+                                        <option class="hide ligue-1" id="rennes">Rennes</option>
+                                        <option class="hide ligue-1" id="st-etienne">St Etienne</option>
+                                        <option class="hide ligue-1" id="strasbourg">Strasbourg</option>
+                                        <option class="hide ligue-1" id="troyes">Troyes</option>
+                                        <option class="hide ligue-1" id="lille">Lille</option>
+                                        <option class="hide ligue-1" id="nantes">Nantes</option>
+                                        <option class="hide ligue-1" id="lorient">Lorient</option>
+                                        <option class="hide ligue-1" id="brest">Brest</option>
+                                        <option class="hide ligue-1" id="nice">Nice</option>
+                                        <option class="hide ligue-1" id="reims">Reims</option>
+
+                                        <!-- Premier league -->
+                                        <option class="hide prem" id="arsenal">Arsenal</option>
+                                        <option class="hide prem" id="aston-villa">Aston Villa</option>
+                                        <option class="hide prem" id="brentford">Brentford</option>
+                                        <option class="hide prem" id="brighton">Brighton</option>
+                                        <option class="hide prem" id="burnley">Burnley</option>
+                                        <option class="hide prem" id="chelsea">Chelsea</option>
+                                        <option class="hide prem" id="crystal-palace">Crystal Palace</option>
+                                        <option class="hide prem" id="everton">Everton</option>
+                                        <option class="hide prem" id="leeds">Leeds</option>
+                                        <option class="hide prem" id="leicester">Leicester</option>
+                                        <option class="hide prem" id="liverpool">Liverpool</option>
+                                        <option class="hide prem" id="manchester-city">Manchester City</option>
+                                        <option class="hide prem" id="manchester-united">Manchester United</option>
+                                        <option class="hide prem" id="newcastle">Newcastle</option>
+                                        <option class="hide prem" id="norwich-city">Norwich City</option>
+                                        <option class="hide prem" id="southampton">Southampton</option>
+                                        <option class="hide prem" id="tottenham">Tottenham</option>
+                                        <option class="hide prem" id="watford">Watford</option>
+                                        <option class="hide prem" id="west-ham">West Ham</option>
+                                        <option class="hide prem" id="wolves">Wolves</option>
+
+                                        <!-- Serie A teams -->
+                                        <option class="hide serie-a" id="atalanta">Atalanta</option>
+                                        <option class="hide serie-a" id="bolonia">Bolonia</option>
+                                        <option class="hide serie-a" id="cagliari">Cagliari</option>
+                                        <option class="hide serie-a" id="empoli">Empoli</option>
+                                        <option class="hide serie-a" id="fiorentina">Fiorentina</option>
+                                        <option class="hide serie-a" id="genoa">Genoa</option>
+                                        <option class="hide serie-a" id="inter-milan">Inter Milan</option>
+                                        <option class="hide serie-a" id="juventus">Juventus</option>
+                                        <option class="hide serie-a" id="lazio">Lazio</option>
+                                        <option class="hide serie-a" id="milan">Milan</option>
+                                        <option class="hide serie-a" id="n&aacute;poles">N&aacute;poles</option>
+                                        <option class="hide serie-a" id="roma">Roma</option>
+                                        <option class="hide serie-a" id="salernitana">Salernitana</option>
+                                        <option class="hide serie-a" id="sampdoria">Sampdoria</option>
+                                        <option class="hide serie-a" id="sassuolo">Sassuolo</option>
+                                        <option class="hide serie-a" id="spezia">Spezia</option>
+                                        <option class="hide serie-a" id="torino">Torino</option>
+                                        <option class="hide serie-a" id="udinese">Udinese</option>
+                                        <option class="hide serie-a" id="venezia">Venezia</option>
+                                        <option class="hide serie-a" id="verona">Verona</option>
+                                    </span>
+                                </select>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- Stats and Standing Info -->
-            <div class="column standings-info">
-                <div class="card">
+            <div class="column">
+                <div class="card standings-info">
                     <div class="card-content standings-content">
                         HELLO
                     </div>
@@ -73,7 +189,10 @@
     <!-- Upcoming Schedule Section -->
     <div class="card upcoming-schedule" id="schedule">
         <div class="card-content schedule-info">
-            <h2>Upcoming Schedule</h2>
+            <h2 class="content">Upcoming Schedule
+                <span id="team"></span>
+            </h2>
+            
         </div>
     </div>
 </body>
