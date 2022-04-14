@@ -136,7 +136,7 @@ header .search:hover {
 }
 
 footer{
-    background-color: var(--secondary);
+    background-color: darkcyan;
     text-align: center;
     font-size: 30px;
     color: var(--primary);
