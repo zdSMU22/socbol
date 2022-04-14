@@ -79,7 +79,7 @@ function showTeamSerieA (team) {
 
 function getStandings () {
     //format the api url
-    var apiStand= apiUrl + "" + apiUrlStandings
+    var apiStand= apiUrl + "eng.1" + apiUrlStandings
     console.log();
     //use fetch to make a request to the url 
     fetch(apiStand).then(function(response) {
