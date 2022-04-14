@@ -3,6 +3,13 @@ var bgBtn = document.getElementById("myBtn");
 //API league start
 var apiUrl = "https://api-football-standings.azharimm.site/leagues/"
 var apiUrlStandings = "/standings?season=2021&sort=asc"
+var winRate = document.getElementById("wins");
+var loseRate = document.getElementById("losses");
+var tieRate = document.getElementById("draws");
+var gpRate = document.getElementById("games-played");
+var rankRate = document.getElementById("rankStandings");
+var orRate = document.getElementById("record");
+var displaySeason = document.getElementById("team");
 //API league End
 var leagueSelect = document.getElementById("myTeam");
 var leagueTeam = document.getElementById("teams");
@@ -13,10 +20,11 @@ var premTeam = document.querySelectorAll(".prem");
 var serieATeam = document.querySelectorAll(".serie-a");
 var leagueVideo ="https://www.scorebat.com/video-api/v3/team/"
 var apiToken ="MTY3MzNfMTY0OTk1ODY3M19iNzQ4MzRmYTdlNjBlYmNjYWE5OWFhMDc1MDc5NjJmMWI1ZTgzZTJk";
-
+var teamLogo = document.getElementById("logos");
+var selectYourLeague = document.querySelectorAll("[data-id]");
 
 function showTeamBund (team) {
-    if (team === "1") {
+    if (team === "0") {
         bundTeam.forEach(bund => {
             bund.classList.remove("hide");
         });
@@ -26,7 +34,7 @@ function showTeamBund (team) {
     });
 }
 function showTeamLaLiga (team) {
-    if (team === "2") {
+    if (team === "1") {
         laLigaTeam.forEach(laliga => {
             laliga.classList.remove("hide");
         });
@@ -36,7 +44,7 @@ function showTeamLaLiga (team) {
     });
 }
 function showTeamligue1 (team) {
-    if (team === "3") {
+    if (team === "2") {
         ligue1Team.forEach(ligue1 => {
             ligue1.classList.remove("hide");
         });
@@ -47,7 +55,7 @@ function showTeamligue1 (team) {
     }
 }
 function showTeamPrem (team) {
-    if (team === "4") {
+    if (team === "3") {
         premTeam.forEach(prem => {
             prem.classList.remove("hide");
         });
@@ -58,7 +66,7 @@ function showTeamPrem (team) {
     }
 }
 function showTeamSerieA (team) {
-    if (team === "5") {
+    if (team === "4") {
     serieATeam.forEach(serieA => {
         serieA.classList.remove("hide");
     });
@@ -69,30 +77,15 @@ function showTeamSerieA (team) {
     }   
 }
 
-function showVideo () {
-    var apiLink = leagueVideo + "/real-madrid/?token=" + apiToken
-
-    fetch(apiLink).then(function(response) {
-        if (response.ok) {
-            return response.json().then(function(video){
-                var videoStandings = document.getElementById("videoStandingsId");
-                videoStandings = response;
-            })
-        } else {
-            alert("video does not work")
-        }
-    })
-}
-showVideo();
-function getStandings (leagueId) {
+function getStandings () {
     //format the api url
-    apiUrl + leagueId + apiUrlStandings
-
+    var apiStand= apiUrl + "" + apiUrlStandings
+    console.log();
     //use fetch to make a request to the url 
-    fetch(apiUrl).then(function(response) {
+    fetch(apiStand).then(function(response) {
         if (response.ok) {
             return response.json().then(function (data) {
-                console.log(data);
+                displayTeamStats(data);    
             })
         } else {
             alert("Error");
@@ -100,17 +93,6 @@ function getStandings (leagueId) {
     });
 }
 
-
-
-function bgVideo () {
-    if (video.paused) {
-        video.play(); 
-        bgBtn.innerHTML = "Pause";
-    } else {
-        video.pause();
-        bgBtn.innerHTML = "Play";
-    }
-}
 //Event Listeners 
 leagueSelect.addEventListener("change", function (){
     var teamSelect = document.getElementById("team-card");
@@ -123,12 +105,32 @@ leagueSelect.addEventListener("change", function (){
     showTeamligue1(this.value);
 })
 
-function leagueChangeHandler (event) {
-    var leagueId = event.target.getAttribute("data-id");
+leagueSelect.addEventListener("change", function () {
+    chosenTeam = (this.value);
+    let i = chosenTeam
+    var apiData = selectYourLeague[i].attributes[2].value
+    var teamData = JSON.stringify(apiData);
+    getStandings(teamData)
 
-    if(leagueId) {
-        getStandings(leagueId);
-    }
+})
+
+function displayTeamStats (data) { 
+    leagueTeam.addEventListener("change", function() {
+        var chosenData = this.value;
+        console.log(chosenData);
+        let i = chosenData
+        displaySeason.innerHTML = data.data.standings[i].team.name;
+        winRate.innerHTML = data.data.standings[i].stats[0].value;
+        loseRate.innerHTML = data.data.standings[i].stats[1].value;
+        tieRate.innerHTML = data.data.standings[i].stats[2].value;
+        gpRate.innerHTML = data.data.standings[i].stats[3].value;
+        rankRate.innerHTML = data.data.standings[i].stats[8].value;
+        orRate.innerHTML = data.data.standings[i].stats[12].displayValue;
+        teamLogo.innerHTML = data.data.standings[i].team.logos;
+
+    })
+    
 }
 
-//leagueTeam.addEventListener("change", );
+//Call functions
+getStandings();

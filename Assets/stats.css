@@ -65,13 +65,12 @@ select {
     padding: 40px;
 }
 
-.standings-info {
-    padding-bottom: 300px;
-}
+/* .standings-info {
+    
+} */
 .upcoming-info {
     padding-bottom: 100px;
     width:80%;
-    height: 87%;
 }
 
 .content-title {
