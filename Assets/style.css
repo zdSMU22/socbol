@@ -1,7 +1,17 @@
 :root {
     --primary: rgb(245, 239, 239);
-    --secondary:
+    --secondary: rgb(100, 149, 273)
+;
+}
 
+body{
+    background-image: url(https://www.supabet.co.uk/wp-content/uploads/2019/06/iStock-959685848.jpg) ;
+    background-size: cover;
+}
+
+h2, h4{
+    color: var(--primary);
+    text-align: center;
 }
 
 
@@ -25,9 +35,19 @@ input {
     width: 300px;
 }
 
-/* button {
-    float: right;
-} */
+#btnAbout {
+    border-style: none;
+    background-color: transparent;
+    color: var(--primary);
+    font-family: Impact;
+    font-size: 23px;
+    padding-right: 15px;
+
+}
+
+#btnAbout:hover{
+    color: lightgrey
+}
 
 header nav {
     float: right;
@@ -48,7 +68,9 @@ header nav ul li{
 header nav ul li a {
     padding: 50px;
     font-size: 24px;
+    font-family: Impact;
     color: var(--primary);
+    font-weight: lighter;
 }
 
 header nav ul li a:hover {
@@ -65,16 +87,57 @@ header .search:hover {
     font: white;
 }
 
+
 #live-score {
-    padding: 50px;  
+    padding: 150px 0px 150px 50px;  
     overflow:hidden;
-    display: block;
-    
+    display: inline;
+
 }
 
 #main-video {
     display: inline-block;
+    padding-left: 50px;
    
 }
 
+#News{
+    font-size: 60px;
+    padding: 10px;
+    background-color: var(--secondary);
+    height: fit-content;
+}
+
+.news{
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#news-text{
+    max-width: 300px;
+    
+}
+
+#news-block1 img,
+#news-block2 img,
+#news-block3 img{
+    max-width: 300px;
+    padding: 20px;
+    justify-content: center;
+}
+
+footer{
+    background-color: var(--secondary);
+    text-align: center;
+    font-size: 30px;
+    color: var(--primary);
+}
+
+footer img {
+    width: 150px;
+    margin: 0;
+}
 
