@@ -1,0 +1,151 @@
+body{
+    background-image: url(images/soccerstadium.jpg);
+    background-repeat: no-repeat;
+    
+    background-size: 100% 100%;
+}
+#main {
+
+    width: 100%;
+    min-height: 1000px;
+    position: relative;
+    clear: both;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    margin-top: 35px;
+    
+    
+}
+
+#leftColumn {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    padding: 15px;
+    left: 0px;
+    width: 368px;
+    padding-top: 0px;
+    
+}
+
+#Feed
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100%;
+    border: solid 1px #333;
+    box-shadow: 3px 3px 8px rgb(37, 37, 37);
+    
+    
+}
+
+#Feed>h2
+{
+
+    color: #eee;
+    background-color: #333;
+    padding: 5px;
+    padding-left: 20px;
+    
+    margin-top: 0px;
+}
+
+.suggestedVideo
+{
+    
+    position: relative;
+    display: none;
+    margin: 15px;
+    
+    margin-top: 0px;
+    clear: both;
+    height: 90px;
+    border: solid 1px #ccc;
+    
+    padding: 8px;
+    background-color: #eee;
+    box-shadow: 3px 3px 3px rgb(105, 105, 105);
+
+}
+.suggestedVideo h2
+{ 
+    display: block;
+    margin-left: 45%;
+    font-size: 16px;
+    
+    line-height: 1em;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    
+}
+
+.suggestedVideo p
+{
+    display: block;
+    
+    margin-left: 45%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    line-height: 1em;
+    font-size: 14px;
+    
+
+}
+
+.suggestedVideo img
+{
+    display: block;
+    position: absolute;
+    width: 40%;
+    top: 10px;
+    
+
+
+}
+
+
+#rightColumn {
+    
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin-left: 400px;
+    padding:  50px;
+    padding-top: 0px;
+    
+    
+}
+
+#Player 
+{
+    display: block;
+    width: 900px;
+    position: absolute;
+    border: solid 1px #333;
+    left: 50%;
+    margin: 0px 0 0 -450px;
+    padding: 0px;
+    box-shadow: 3px 3px 13px rgb(37, 37, 37);
+    
+}
+
+#Player>h2
+{
+    color: #eee;
+    background-color: #333;
+    padding: 5px;
+    padding-left: 20px;
+    
+    margin-top: 0px;
+}
+#Player img
+{
+    margin: 15px;
+    margin-top: 0px;
+    width: 870px;
+    
+}

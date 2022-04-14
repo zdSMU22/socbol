@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>SocBOL Videos</title>
         <link rel="stylesheet" href="./Assets/style.css">
+        <link rel="stylesheet" href="./Assets/videos.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="Assets/videos.js"></script>
     </head>
 
     <body>
@@ -21,27 +24,51 @@
             <nav>
                 <ul>
                     <li><a href="">About Us</a></li>
-                    <li><a href="">Stats</a></li>
-                    <li><a href="">Videos</a></li>
+                    <li><a href="./stats.html">Stats </a></li>
+                    <li><a href="./videos.html">Videos</a></li>
                     <li><a href="">Tickets</a></li>
                     <li><a href="">Donate</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div id="live-score"></div>
+    
 
-        <div id="main-video" >
-            <h2>Video of the Week</h2>
+        <div id="main" >
+            <section id="leftColumn">
+                <div id="Feed">
+                    <h2>Recent Videos</h2>
+                    <div class="suggestedVideo">
+                        <h2>Suggested Videos</h2>
+                        <p>Box number 1</p>
+                        <img src="Assets/images/balls.jpg" alt="soccorball-thumbnail">
+                    </div>
+                    <div class="suggestedVideo">
+                        <h2>Suggested Videos</h2>
+                        <p>Box number 2</p>
+                        <img src="Assets/images/balls.jpg" alt="soccorball-thumbnail">
+                    </div>
+                    <div class="suggestedVideo">
+                        <h2>Suggested Videos</h2>
+                        <p>Box number 3</p>
+                        <img src="Assets/images/balls.jpg" alt="soccorball-thumbnail">
+                    </div>
+                    
+                </div>
+            </section>
+            <section id="rightColumn">
+                <div id="Player">
+                    <h2>Suggested Video</h2>
+                    <div id="videoPlayer">
+                        <img src="Assets/images/fakeplayer.jpg" alt="fake video player">
+                    </div>
+                </div>
+
+            </section>
+
         </div>
-    </br>
-        <section class="news">
-            <h2>News</h2>
 
-            <div id="news-block1"></div>
-            <div id="news-block2"></div>
-            <div id="news-block3"></div>
-        </section>
+
     </body>
 
     <footer>
