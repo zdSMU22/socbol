@@ -36,21 +36,21 @@ nav ul li a {
 
 select {
     font-size: 22px;
+    overflow-y: scroll;
     
 }
+
+#teams {
+    font-size: 20px;
+    width:100%;
+}
+
 
 .league-teams {
     display:flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-
-.team-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
 }
 
 .container {

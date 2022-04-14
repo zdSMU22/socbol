@@ -37,31 +37,30 @@
             <!-- Search bar / Schedule area -->
             <div class="column search-info">
                 <!-- Search bar -->
-                <div class="field">
+                <div class="select">
                     <p class="control">
                         <select id="myTeam">
-                        <span class="select">
+                        <span class="select" id="leagueNames">
                             <option selected>League</option>
-                            <option value="bundesliga">Bundesliga</option>
-                            <option value="la-liga">La Liga</option>
-                            <option vgalue="ligue-1">Ligue 1</option>
-                            <option value="major-league-soccer">Major League Soccer</option>
-                            <option value="english-premier-league">Premier League</option>
-                            <option value="serie-a">Serie A</option> 
+                            <option value="1">Bundesliga</option>
+                            <option value="2">La Liga</option>
+                            <option value="3">Ligue 1</option>
+                            <option value="4">Premier League</option>
+                            <option value="5">Serie A</option> 
                         </span>
                         </select>
                     </p>
                 </div>
                 <!-- Select team -->
-                <div class="card upcoming-info">
-                    <h2 class="team-title">Select a team to View</h2>
+                <div class="card upcoming-info hide" id="team-card">
                     <div class="card-content" id="select-team">
-                        <div class="field league-teams">
+                        <div class="select league-teams">
                             <p class="control">
-                                <select id="teams" class="">
-                                    <span class="select">
-                                        <option selected>Choose Team to view standings</option>
+                                <select id="teams">
+                                    <span class="select is-primary">
+                                        <option selected>Select a Team to view</option>
                                         <!-- Bundesliga Teams -->
+                                        <span id="germany">
                                         <option class="hide bund" id="arminia-b">Arminia B.</option>
                                         <option class="hide bund" id="augsburgo">Augsburgo</option>
                                         <option class="hide bund" id="b-dortmund">B. Dortmund</option>
@@ -80,7 +79,7 @@
                                         <option class="hide bund" id="stuttgart">Stuttgart</option>
                                         <option class="hide bund" id="uni&oacute;n-berlin">Uni&oacute;n Berlin</option>
                                         <option class="hide bund" id="wolfsburgo">Wolfsburgo</option>
-
+                                        </span>            
                                         <!-- La Liga Teams -->
                                         <option class="hide la-liga" id="alaves">Alaves</option>
                                         <option class="hide la-liga" id="athletico-club">Athletico Club</option>
@@ -195,5 +194,7 @@
             
         </div>
     </div>
+
+    <script src="./Assets/stats.js"></script>
 </body>
 </html>

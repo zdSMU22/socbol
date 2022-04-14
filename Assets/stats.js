@@ -3,9 +3,69 @@ var bgBtn = document.getElementById("myBtn");
 var apiUrlStandings = "/standings?season=2022&sort=asc"
 var premierLeague="eng.1"
 var teamStandings = document.getElementById("team");
-var teamSelect = document.getElementById("myTeam");
+var leagueSelect = document.getElementById("myTeam");
+var leagueTeam = document.getElementById("teams");
+var bundTeam = document.querySelectorAll(".bund");
+var laLigaTeam = document.querySelectorAll(".la-liga");
+var ligue1Team = document.querySelectorAll(".ligue-1");
+var premTeam = document.querySelectorAll(".prem");
+var serieATeam = document.querySelectorAll(".serie-a");
 
-//Array for displaying your league standings
+
+function showTeamBund (team) {
+    if (team === "1") {
+        bundTeam.forEach(bund => {
+            bund.classList.remove("hide");
+        });
+    } else 
+    bundTeam.forEach(bund => {
+        bund.classList.add("hide");
+    });
+}
+function showTeamLaLiga (team) {
+    if (team === "2") {
+        laLigaTeam.forEach(laliga => {
+            laliga.classList.remove("hide");
+        });
+    } else 
+    laLigaTeam.forEach(laliga => {
+        laliga.classList.add("hide");
+    });
+}
+function showTeamligue1 (team) {
+    if (team === "3") {
+        ligue1Team.forEach(ligue1 => {
+            ligue1.classList.remove("hide");
+        });
+    } else {
+        ligue1Team.forEach(ligue1 => {
+            ligue1.classList.add("hide");
+        });
+    }
+}
+function showTeamPrem (team) {
+    if (team === "4") {
+        premTeam.forEach(prem => {
+            prem.classList.remove("hide");
+        });
+    } else {
+        premTeam.forEach(prem => {
+            prem.classList.add("hide");
+        });
+    }
+}
+function showTeamSerieA (team) {
+    if (team === "5") {
+    serieATeam.forEach(serieA => {
+        serieA.classList.remove("hide");
+    });
+    } else {
+        serieATeam.forEach(serieA=> {
+            serieA.classList.add("hide");
+        });
+    }   
+}
+
 function getStandings () {
     //format the api url
     var apiUrl = "https://api-football-standings.azharimm.site/leagues/" + premierLeague + apiUrlStandings;
@@ -21,12 +81,6 @@ function getStandings () {
 }
 
 
-
-
-
-
-
-
 function bgVideo () {
     if (video.paused) {
         video.play(); 
@@ -37,12 +91,15 @@ function bgVideo () {
     }
 }
 
-
-
-
-//Event Handlers
-teamSelect.onchange = function () {
-    var leagueTeam = document.getElementById("select-team").value;
-
-
-}
+//Event Listeners 
+leagueSelect.addEventListener("change", function (){
+    var teamSelect = document.getElementById("team-card");
+    teamSelect.classList.remove("hide");
+    
+    //function for showing team
+    showTeamBund(this.value);
+    showTeamLaLiga(this.value);
+    showTeamPrem(this.value);
+    showTeamSerieA(this.value);
+    showTeamligue1(this.value);
+})
