@@ -34,19 +34,6 @@ input {
     width: 300px;
 }
 
-#btnAbout {
-    border-style: none;
-    background-color: transparent;
-    color: var(--primary);
-    font-family: Impact;
-    font-size: 23px;
-    padding-right: 15px;
-
-}
-
-#btnAbout:hover{
-    color: lightgrey
-}
 
 header nav {
     float: right;

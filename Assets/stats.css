@@ -6,7 +6,7 @@
 
 :root {
     --primary: rgb(245, 239, 239);
-    --secondary:
+    --secondary: rgb(100, 149, 273);
 }
 
 .stats-header {
@@ -26,6 +26,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+
+body{
+    background-image: url(https://www.supabet.co.uk/wp-content/uploads/2019/06/iStock-959685848.jpg) ;
+    background-size: cover;
 }
 
 nav ul li a {
