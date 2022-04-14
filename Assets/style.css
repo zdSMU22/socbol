@@ -1,6 +1,7 @@
 :root {
     --primary: rgb(245, 239, 239);
     --secondary: rgb(100, 149, 273);
+    --tertiary: rgb()
 }
 
 body{
@@ -117,10 +118,12 @@ header .search:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: var(--secondary);
 }
 
 #news-text{
     max-width: 300px;
+    
     
 }
 

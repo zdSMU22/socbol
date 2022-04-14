@@ -28,6 +28,10 @@
     align-items: center;
 }
 
+#main{
+    color: var(--primary);
+}
+
 
 body{
     background-image: url(https://www.supabet.co.uk/wp-content/uploads/2019/06/iStock-959685848.jpg) ;
@@ -35,7 +39,7 @@ body{
 }
 
 nav ul li a {
-    font-size: 20px; 
+    font-size: 24px; 
     padding: 30px 30px;
     color: var(--primary);
 }
@@ -125,4 +129,10 @@ footer {
 /* Hide content */
 .hide {
     display: none; 
+}
+
+.stats-container {
+    background-color: var(--secondary);
+    font-size: 25px;
+    font-weight: bolder;
 }
