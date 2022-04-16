@@ -97,7 +97,9 @@ select {
 .stats-title {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-right: 100px;
+    font-weight: bold;
+    font-size: 22px;
 }
 
 .team-stats {

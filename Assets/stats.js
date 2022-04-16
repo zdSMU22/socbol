@@ -18,10 +18,10 @@ var laLigaTeam = document.querySelectorAll(".la-liga");
 var ligue1Team = document.querySelectorAll(".ligue-1");
 var premTeam = document.querySelectorAll(".prem");
 var serieATeam = document.querySelectorAll(".serie-a");
-var leagueVideo ="https://www.scorebat.com/video-api/v3/team/"
-var apiToken ="MTY3MzNfMTY0OTk1ODY3M19iNzQ4MzRmYTdlNjBlYmNjYWE5OWFhMDc1MDc5NjJmMWI1ZTgzZTJk";
 var teamLogo = document.getElementById("logos");
 var selectYourLeague = document.querySelectorAll("[data-id]");
+
+//Functions to show the list of teams within the corresponding league
 
 function showTeamBund (team) {
     if (team === "0") {
@@ -77,6 +77,10 @@ function showTeamSerieA (team) {
     }   
 }
 
+//Function for displaying teams within their respective league -end
+
+//function for grabbing stats from the standings-api 
+
 function getStandings () {
 
     leagueSelect.addEventListener("change", function () {
@@ -84,25 +88,26 @@ function getStandings () {
         let i = chosenTeam
         var apiData = selectYourLeague[i].attributes[2].value
         var teamData = apiData;
-        
-    })
+        console.log(teamData);
 
-    //format the api url
-    var apiStand= apiUrl + teamData + apiUrlStandings
+        //format the api url
+        var apiStand= apiUrl + teamData + apiUrlStandings
     
-    //use fetch to make a request to the url 
-    fetch(apiStand).then(function(response) {
-        if (response.ok) {
-            return response.json().then(function (data) {
-                displayTeamStats(data);    
-            })
-        } else {
-            alert("Error");
-        }
+        //use fetch to make a request to the url 
+        fetch(apiStand).then(function(response) {
+            if (response.ok) {
+                return response.json().then(function (data) {
+                    displayTeamStats(data);    
+                })
+            } else {
+                alert("Error");
+            }
+        });
     });
 }
 
-//Event Listeners 
+//EventHandlers
+
 leagueSelect.addEventListener("change", function (){
     var teamSelect = document.getElementById("team-card");
     teamSelect.classList.remove("hide");    
@@ -122,6 +127,7 @@ leagueSelect.addEventListener("change", function () {
 })
 
 
+//function to display teamStats when the change function happens
 function displayTeamStats (data) { 
     leagueTeam.addEventListener("change", function() {
         var chosenData = this.value;
