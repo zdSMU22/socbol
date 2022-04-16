@@ -147,3 +147,7 @@ footer img {
     margin: 0;
 }
 
+/* Modal Style */
+.modal{
+   border-radius: 10px; 
+}

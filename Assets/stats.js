@@ -78,9 +78,18 @@ function showTeamSerieA (team) {
 }
 
 function getStandings () {
+
+    leagueSelect.addEventListener("change", function () {
+        chosenTeam = (this.value);
+        let i = chosenTeam
+        var apiData = selectYourLeague[i].attributes[2].value
+        var teamData = apiData;
+        
+    })
+
     //format the api url
-    var apiStand= apiUrl + "eng.1" + apiUrlStandings
-    console.log();
+    var apiStand= apiUrl + teamData + apiUrlStandings
+    
     //use fetch to make a request to the url 
     fetch(apiStand).then(function(response) {
         if (response.ok) {
@@ -109,10 +118,9 @@ leagueSelect.addEventListener("change", function () {
     chosenTeam = (this.value);
     let i = chosenTeam
     var apiData = selectYourLeague[i].attributes[2].value
-    var teamData = JSON.stringify(apiData);
-    getStandings(teamData)
-
+    var teamData = apiData;
 })
+
 
 function displayTeamStats (data) { 
     leagueTeam.addEventListener("change", function() {

@@ -6,24 +6,19 @@
         <title>SocBOL Videos</title>
         <link rel="stylesheet" href="./Assets/style.css">
         <link rel="stylesheet" href="./Assets/videos.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="Assets/videos.js"></script>
+        <link rel="stylesheet" href="./bulma/css/bulma.css">
     </head>
 
     <body>
         <header>
-            <!-- why is the submit button before the input? Do I need "form action"? -->
-           <!-- <form action=""> -->
                <input class="search" type="text" placeholder="Search">
-           <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
-        <!-- </form> -->
         </br>
     </br>
            <h1><a href="./index.html">socB⚽L</a></h1>
 
             <nav>
                 <ul>
-                    <li><a href="">About Us</a></li>
+                    <li><a id="aboutUs">About Us</a></li>
                     <li><a href="./stats.html">Stats </a></li>
                     <li><a href="./videos.html">Videos</a></li>
                     <li><a href="">Tickets</a></li>
@@ -67,14 +62,61 @@
             </section>
 
         </div>
+     <!-- Modal -->
+     <div class="modal"> 
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">About Us</p>
+                <button id="deleteBtn" class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <p>socBOL was created for the soccer / futbol enthusiast. If you enjoy watching highlights of your favorite team this is the place for you! 
+                You can navigate through our site and be able to look up current news, current matches, and even view the stats of different teams in different leagues. </p>
+                </br>
+                <p> We are a team of three and are working together to create and produce work that we can be proud of and for the people that 
+                    we believe in! We are available for hire in a wide range of creative disciplines and are continuing to improve our skillset.
+                    Please check us down below at our GitHub! Thank you.
+                </p>
+                </br>
+                <div class="columns">
+                    <div class="column">Z'Kiah Dixon 
+                        <p class="image is-128x128">
+                            <a href="https://github.com/zdSMU22">
+                                <img src="./Assets/images/Z'Kiah.png" alt="picture of Z'Kiah github profile">
+                            </a>
+                        </p>
+                    </div>
+                    <div class="column">Jason Kim
+                        <p class="image is-128x128">
+                            <a href="https://github.com/JasonKim0122">
+                                <img src="./Assets/images/Jason.PNG" alt="picture of Jason github profile">
+                            </a>
+                        </p>
+                    </div>
+                    <div class="column"> Stephen Kolbo
+                        <p class="image is-128x128">
+                            <a href="https://github.com/skolbo">
+                                <img src="./Assets/images/Stephen.png" alt="picture of Stephen github profile">
+                            </a>
+                        </p>
+                    </div>
+                </div>
 
 
+            </section>
+            <footer class="modal-card-foot">
+                <button id="exitBtn" class="button">Exit</button>
+            </footer>
+        </div>   
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="Assets/videos.js"></script>
+        <script src="./Assets/script.js"></script> 
     </body>
 
     <footer>
         <h3>Follow Us!</h3>
         <img src="https://library.kissclipart.com/20180914/pyq/kissclipart-facebook-twitter-instagram-youtube-logo-png-clipar-efd6031476d0bb67.jpg">
     </br>
-
     </footer>
 </html>
