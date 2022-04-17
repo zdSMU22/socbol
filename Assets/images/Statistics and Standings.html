@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/stats.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics and Standings</title>
+      
+     
+<link rel="stylesheet" href="./Statistics and Standings_files/stats.css"><link rel="stylesheet" href="./Statistics and Standings_files/bulma.css"></head>
+
+
+<body>
+
+    <!-- Header -->
+    <header class="stats-header">
+        <div class="return-home">
+            <a id="main" href="http://127.0.0.1:5500/index.html">socB⚽L</a>
+        </div>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li>
+                        <a id="aboutUs">About Us</a>
+                        <a href="http://127.0.0.1:5500/videos.html">Videos</a>
+                        <a id="ticketsModalId">Tickets</a>
+                        <a id="donateModalId">DONATE</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Info Area -->
+    <div class="container main-container">
+        <div class="columns">
+            <!-- Search bar / Schedule area -->
+            <div class="column search-info">
+                <!-- Search bar -->
+                <div class="select">
+                    <p class="control">
+                        <select id="myTeam">
+                        
+                            <option selected="">League</option>
+                            <option value="0" class="league" data-id="ger.1">Bundesliga</option>
+                            <option value="1" class="league" data-id="esp.1">La Liga</option>
+                            <option value="2" class="league" data-id="fra.1">Ligue 1</option>
+                            <option value="3" class="league" data-id="eng.1">Premier League</option>
+                            <option value="4" class="league" data-id="ita.1">Serie A</option> 
+                        
+                        </select>
+                    </p>
+                </div>
+                <!-- Select team -->
+                <div class="card upcoming-info hide" id="team-card">
+                    <div class="card-content" id="select-team">
+                        <div class="select league-teams">
+                            <p class="control">
+                                <select id="teams">
+                                    
+                                        <option selected="">Select a Team to view</option>
+                                        <!-- Bundesliga Teams -->
+                                        
+                                        <option class="hide bund" value="16" id="arminia-b">Arminia B.</option>
+                                        <option class="hide bund" value="13" id="fc-augsburg">FC Augsburg</option>
+                                        <option class="hide bund" value="1" id="b-dortmund">B. Dortmund</option>
+                                        <option class="hide bund" value="2" id="bayer-leverkusen">Bayer Leverkusen</option>
+                                        <option class="hide bund" value="0" id="bayern">Bayern</option>
+                                        <option class="hide bund" value="11" id="vfl-bochum">VfL Bochum</option>
+                                        <option class="hide bund" value="5" id="fc-cologne">FC Cologne</option>
+                                        <option class="hide bund" value="9" id="eintracht-fr">Eintracht Fr.</option>
+                                        <option class="hide bund" value="4" id="freiburg">Freiburg</option>
+                                        <option class="hide bund" value="17" id="greuther-fürth">Greuther Fürth</option>
+                                        <option class="hide bund" value="14" id="hertha-berlin">Hertha Berlin</option>
+                                        <option class="hide bund" value="6" id="tsg-hoffenheim">TSG Hoffenheim</option>
+                                        <option class="hide bund" value="10" id="borussia-monchengladbach">Borussia Monchengladbach</option>
+                                        <option class="hide bund" value="8" id="mainz-05">Mainz 05</option>
+                                        <option class="hide bund" value="3" id="rb-leipzig">RB Leipzig</option>
+                                        <option class="hide bund" value="15" id="vfb-stuttgart">VfB Stuttgart</option>
+                                        <option class="hide bund" value="7" id="unión-berlin">Unión Berlin</option>
+                                        <option class="hide bund" value="12" id="vfl-wolfsburg">VfL Wolfsburg</option>
+                                                    
+                                        <!-- La Liga Teams -->
+                                        <option class="hide la-liga" value="18" id="alaves">Alaves</option>
+                                        <option class="hide la-liga" value="7" id="athletico-club">Athletico Club</option>
+                                        <option class="hide la-liga" value="3" id="atletico-de-madrid">Atletico De Madrid</option>
+                                        <option class="hide la-liga" value="11" id="celta-de-vigo">Celta De Vigo</option>
+                                        <option class="hide la-liga" value="10" id="espanyol">Espanyol</option>
+                                        <option class="hide la-liga" value="1" id="barcelona">Barcelona</option>
+                                        <option class="hide la-liga" value="2" id="sevilla">Sevilla</option>
+                                        <option class="hide la-liga" value="16" id="mallorca">Mallorca</option>
+                                        <option class="hide la-liga" value="12" id="elche">Elche</option>
+                                        <option class="hide la-liga" value="4" id="real-betis">Real Betis</option>
+                                        <option class="hide la-liga" value="0" id="real-madrid">Real Madrid</option>
+                                        <option class="hide la-liga" value="5" id="real-sociedad">Real Sociedad</option>
+                                        <option class="hide la-liga" value="8" id="osasuna">Osasuna</option>
+                                        <option class="hide la-liga" value="6" id="villarreal">Villarreal</option>
+                                        <option class="hide la-liga" value="9" id="valencia">Valencia</option>
+                                        <option class="hide la-liga" value="19" id="levante">Levante</option>
+                                        <option class="hide la-liga" value="14" id="getafe">Getafe</option>
+                                        <option class="hide la-liga" value="13" id="rayo-vallecano">Rayo Vallecano</option>
+                                        <option class="hide la-liga" value="17" id="cadiz">Cadiz</option>
+                                        <option class="hide la-liga" value="15" id="granada-cf">Granada CF</option>
+
+                                        <!-- Ligue 1 Teams -->
+                                        <option class="hide ligue-1" value="13" id="angers">Angers</option>
+                                        <option class="hide ligue-1" value="18" id="bordeaux">Bordeaux</option>
+                                        <option class="hide ligue-1" value="16" id="clermont">Clermont</option>
+                                        <option class="hide ligue-1" value="7" id="lens">Lens</option>
+                                        <option class="hide ligue-1" value="9" id="lyon">Lyon</option>
+                                        <option class="hide ligue-1" value="1" id="marseille">Marseille</option>
+                                        <option class="hide ligue-1" value="19" id="metz">Metz</option>
+                                        <option class="hide ligue-1" value="3" id="monaco">Monaco</option>
+                                        <option class="hide ligue-1" value="10" id="montpellier">Montpellier</option>
+                                        <option class="hide ligue-1" value="0" id="paris-saint-germain">Paris Saint Germain</option>
+                                        <option class="hide ligue-1" value="2" id="rennes">Rennes</option>
+                                        <option class="hide ligue-1" value="17" id="st-etienne">St Etienne</option>
+                                        <option class="hide ligue-1" value="4" id="strasbourg">Strasbourg</option>
+                                        <option class="hide ligue-1" value="14" id="troyes">Troyes</option>
+                                        <option class="hide ligue-1" value="6" id="lille">Lille</option>
+                                        <option class="hide ligue-1" value="8" id="nantes">Nantes</option>
+                                        <option class="hide ligue-1" value="15" id="lorient">Lorient</option>
+                                        <option class="hide ligue-1" value="11" id="brest">Brest</option>
+                                        <option class="hide ligue-1" value="5" id="nice">Nice</option>
+                                        <option class="hide ligue-1" value="12" id="reims">Reims</option>
+
+                                        <!-- Premier league -->
+                                        <option class="hide prem" value="5" id="arsenal">Arsenal</option>
+                                        <option class="hide prem" value="13" id="aston-villa">Aston Villa</option>
+                                        <option class="hide prem" value="10" id="brentford">Brentford</option>
+                                        <option class="hide prem" value="9" id="brighton">Brighton</option>
+                                        <option class="hide prem" value="17" id="burnley">Burnley</option>
+                                        <option class="hide prem" value="2" id="chelsea">Chelsea</option>
+                                        <option class="hide prem" value="12" id="crystal-palace">Crystal Palace</option>
+                                        <option class="hide prem" value="16" id="everton">Everton</option>
+                                        <option class="hide prem" value="15" id="leeds">Leeds</option>
+                                        <option class="hide prem" value="8" id="leicester">Leicester</option>
+                                        <option class="hide prem" value="1" id="liverpool">Liverpool</option>
+                                        <option class="hide prem" value="0" id="manchester-city">Manchester City</option>
+                                        <option class="hide prem" value="4" id="manchester-united">Manchester United</option>
+                                        <option class="hide prem" value="14" id="newcastle">Newcastle</option>
+                                        <option class="hide prem" value="19" id="norwich-city">Norwich City</option>
+                                        <option class="hide prem" value="11" id="southampton">Southampton</option>
+                                        <option class="hide prem" value="3" id="tottenham">Tottenham</option>
+                                        <option class="hide prem" value="18" id="watford">Watford</option>
+                                        <option class="hide prem" value="6" id="west-ham">West Ham</option>
+                                        <option class="hide prem" value="7" id="wolves">Wolves</option>
+
+                                        <!-- Serie A teams -->
+                                        <option class="hide serie-a" value="7" id="atalanta">Atalanta</option>
+                                        <option class="hide serie-a" value="12" id="bolonia">Bolonia</option>
+                                        <option class="hide serie-a" value="16" id="cagliari">Cagliari</option>
+                                        <option class="hide serie-a" value="13" id="empoli">Empoli</option>
+                                        <option class="hide serie-a" value="5" id="fiorentina">Fiorentina</option>
+                                        <option class="hide serie-a" value="18" id="genoa">Genoa</option>
+                                        <option class="hide serie-a" value="1" id="inter-milan">Inter Milan</option>
+                                        <option class="hide serie-a" value="3" id="juventus">Juventus</option>
+                                        <option class="hide serie-a" value="6" id="lazio">Lazio</option>
+                                        <option class="hide serie-a" value="0" id="ac-milan">AC Milan</option>
+                                        <option class="hide serie-a" value="2" id="nápoles">Nápoles</option>
+                                        <option class="hide serie-a" value="4" id="roma">Roma</option>
+                                        <option class="hide serie-a" value="19" id="salernitana">Salernitana</option>
+                                        <option class="hide serie-a" value="15" id="sampdoria">Sampdoria</option>
+                                        <option class="hide serie-a" value="8" id="sassuolo">Sassuolo</option>
+                                        <option class="hide serie-a" value="14" id="spezia">Spezia</option>
+                                        <option class="hide serie-a" value="10" id="torino">Torino</option>
+                                        <option class="hide serie-a" value="11" id="udinese">Udinese</option>
+                                        <option class="hide serie-a" value="17" id="venezia">Venezia</option>
+                                        <option class="hide serie-a" value="9" id="verona">Verona</option>
+                                    
+                                </select>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Standings -->
+            <div class="column">
+                <div class="card standings-info">
+                    <div class="card-content standings-content">
+                        <!-- Team:<span id="logos"></span> -->
+                    </div>
+                    <div id="videoStandingsId">
+                        <iframe src="./Statistics and Standings_files/saved_resource.html" frameborder="0" height="300" allowfullscreen="" allow="autoplay; fullscreen" style="width: 100%; height: 1184px; overflow: hidden; display: block;" class="_scorebatEmbeddedPlayer_" id="iFrameResizer0" scrolling="no"></iframe><script id="scorebat-jssdk" src="./Statistics and Standings_files/embed.js.download"></script><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://www.scorebat.com/embed/embed.js?v=arrv'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'scorebat-jssdk'));</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats  -->
+    <footer class="stats-container">
+    <div class="team-stats" id="stats">
+        <h2 class="content stats-title" id="team">Stats for Season:</h2>
+    </div>
+    <div class="stats-info">
+        <div class="columns stats-column">
+            <div class="column">Wins: <span id="wins"></span></div>
+            <div class="column">Losses: <span id="losses"></span></div>
+            <div class="column">Draws: <span id="draws"></span></div>
+        </div>
+    </div>
+    <div class="stats-info">
+        <div class="columns stats-column">
+            <div class="column">Games Played: <span id="games-played"></span></div>
+            <div class="column">Rank: <span id="rankStandings"></span></div>
+            <div class="column">Overall Record: <span id="record"></span></div>
+        </div>
+    </div>
+    </footer>
+            <!-- Modal Start-->
+            <!-- Modal for "About Us" Tab -->
+            <div class="modal aboutUsModal"> 
+                <div class="modal-background aboutUsBg"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">About Us</p>
+                        <button id="deleteBtn" class="delete" aria-label="close"></button>
+                    </header>
+                <section class="modal-card-body">
+                    <p>socBOL was created for the soccer / futbol enthusiast. If you enjoy watching highlights of your favorite team this is the place for you! 
+                        You can navigate through our site and be able to look up current news, current matches, and even view the stats of different teams in different leagues. </p>
+                    <br>
+                    <p> We are a team of three and are working together to create and produce work that we can be proud of and for the people that 
+                        we believe in! We are available for hire in a wide range of creative disciplines and are continuing to improve our skillset.
+                        Please check us down below at our GitHub! Thank you.
+                    </p>
+                    <br>
+                    <div class="columns">
+                        <div class="column">Z'Kiah Dixon 
+                            <p class="image is-128x128">
+                                <a href="https://github.com/zdSMU22">
+                                    <img src="./Statistics and Standings_files/Z&#39;Kiah.png" alt="picture of Z&#39;Kiah github profile">
+                                </a>
+                            </p>
+                        </div>
+                        <div class="column">Jason Kim
+                            <p class="image is-128x128">
+                                <a href="https://github.com/JasonKim0122">
+                                    <img src="./Statistics and Standings_files/Jason.PNG" alt="picture of Jason github profile">
+                                </a>
+                            </p>
+                        </div>
+                        <div class="column"> Stephen Kolbo
+                            <p class="image is-128x128">
+                                <a href="https://github.com/skolbo">
+                                    <img src="./Statistics and Standings_files/Stephen.png" alt="picture of Stephen github profile">
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+    
+    
+                </section>
+                <footer class="modal-card-foot">
+                    <button id="exitBtn" class="button">Exit</button>
+                </footer>
+            </div>
+        </div>
+        <!-- Modal for Tickets tab -->
+        <div class="modal ticketsModal">
+            <div class="modal-background ticketsBg"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Tickets</p>
+                    <button id="deleteBtnTickets" class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Coming Soon! Thanks for your understanding!</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button id="exitBtnTickets" class="button">Exit</button>
+                </footer>
+            </div>
+        </div>
+        <!-- Modal for Donate tab -->
+        <div class="modal donateModal">
+            <div class="modal-background donateBg"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Donate</p>
+                    <button id="deleteBtnDonate" class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Coming Soon! Thanks for your understanding!</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button id="exitBtnDonate" class="button">Exit</button>
+                </footer>
+            </div>
+        </div>
+        <!-- Modal End -->
+        <script src="./Statistics and Standings_files/stats.js.download"></script>
+        <script src="./Statistics and Standings_files/script.js.download"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
