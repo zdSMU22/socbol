@@ -23,8 +23,8 @@
                     <li>
                         <a id="aboutUs">About Us</a>
                         <a href="./videos.html">Videos</a>
-                        <a href="">Tickets</a>
-                        <a href="">DONATE</a>
+                        <a id="ticketsModalId">Tickets</a>
+                        <a id="donateModalId">DONATE</a>
                     </li>
                 </ul>
             </nav>
@@ -208,55 +208,89 @@
         </div>
     </div>
     </footer>
-            <!-- Modal -->
-            <div class="modal"> 
-                <div class="modal-background"></div>
+            <!-- Modal Start-->
+            <!-- Modal for "About Us" Tab -->
+            <div class="modal aboutUsModal"> 
+                <div class="modal-background aboutUsBg"></div>
                 <div class="modal-card">
                     <header class="modal-card-head">
                         <p class="modal-card-title">About Us</p>
                         <button id="deleteBtn" class="delete" aria-label="close"></button>
                     </header>
-                    <section class="modal-card-body">
-                        <p>socBOL was created for the soccer / futbol enthusiast. If you enjoy watching highlights of your favorite team this is the place for you! 
+                <section class="modal-card-body">
+                    <p>socBOL was created for the soccer / futbol enthusiast. If you enjoy watching highlights of your favorite team this is the place for you! 
                         You can navigate through our site and be able to look up current news, current matches, and even view the stats of different teams in different leagues. </p>
-                        </br>
-                        <p> We are a team of three and are working together to create and produce work that we can be proud of and for the people that 
-                            we believe in! We are available for hire in a wide range of creative disciplines and are continuing to improve our skillset.
-                            Please check us down below at our GitHub! Thank you.
-                        </p>
-                        </br>
-                        <div class="columns">
-                            <div class="column">Z'Kiah Dixon 
-                                <p class="image is-128x128">
-                                    <a href="https://github.com/zdSMU22">
-                                        <img src="./Assets/images/Z'Kiah.png" alt="picture of Z'Kiah github profile">
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="column">Jason Kim
-                                <p class="image is-128x128">
-                                    <a href="https://github.com/JasonKim0122">
-                                        <img src="./Assets/images/Jason.PNG" alt="picture of Jason github profile">
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="column"> Stephen Kolbo
-                                <p class="image is-128x128">
-                                    <a href="https://github.com/skolbo">
-                                        <img src="./Assets/images/Stephen.png" alt="picture of Stephen github profile">
-                                    </a>
-                                </p>
-                            </div>
+                    </br>
+                    <p> We are a team of three and are working together to create and produce work that we can be proud of and for the people that 
+                        we believe in! We are available for hire in a wide range of creative disciplines and are continuing to improve our skillset.
+                        Please check us down below at our GitHub! Thank you.
+                    </p>
+                    </br>
+                    <div class="columns">
+                        <div class="column">Z'Kiah Dixon 
+                            <p class="image is-128x128">
+                                <a href="https://github.com/zdSMU22">
+                                    <img src="./Assets/images/Z'Kiah.png" alt="picture of Z'Kiah github profile">
+                                </a>
+                            </p>
                         </div>
+                        <div class="column">Jason Kim
+                            <p class="image is-128x128">
+                                <a href="https://github.com/JasonKim0122">
+                                    <img src="./Assets/images/Jason.PNG" alt="picture of Jason github profile">
+                                </a>
+                            </p>
+                        </div>
+                        <div class="column"> Stephen Kolbo
+                            <p class="image is-128x128">
+                                <a href="https://github.com/skolbo">
+                                    <img src="./Assets/images/Stephen.png" alt="picture of Stephen github profile">
+                                </a>
+                            </p>
+                        </div>
+                    </div>
     
     
-                    </section>
-                    <footer class="modal-card-foot">
-                        <button id="exitBtn" class="button">Exit</button>
-                    </footer>
-                </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button id="exitBtn" class="button">Exit</button>
+                </footer>
             </div>
-    <script src="./Assets/stats.js"></script>
-    <script src="./Assets/script.js"></script>
+        </div>
+        <!-- Modal for Tickets tab -->
+        <div class="modal ticketsModal">
+            <div class="modal-background ticketsBg"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Tickets</p>
+                    <button id="deleteBtnTickets" class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Coming Soon! Thanks for your understanding!</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button id="exitBtnTickets" class="button">Exit</button>
+                </footer>
+            </div>
+        </div>
+        <!-- Modal for Donate tab -->
+        <div class="modal donateModal">
+            <div class="modal-background donateBg"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Donate</p>
+                    <button id="deleteBtnDonate" class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Coming Soon! Thanks for your understanding!</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button id="exitBtnDonate" class="button">Exit</button>
+                </footer>
+            </div>
+        </div>
+        <!-- Modal End -->
+        <script src="./Assets/stats.js"></script>
+        <script src="./Assets/script.js"></script>
 </body>
 </html>

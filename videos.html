@@ -21,8 +21,8 @@
                     <li><a id="aboutUs">About Us</a></li>
                     <li><a href="./stats.html">Stats </a></li>
                     <li><a href="./videos.html">Videos</a></li>
-                    <li><a href="">Tickets</a></li>
-                    <li><a href="">Donate</a></li>
+                    <li><a id="ticketsModalId">Tickets</a></li>
+                    <li><a id="donateModalId">Donate</a></li>
                 </ul>
             </nav>
         </header>
@@ -62,9 +62,10 @@
             </section>
 
         </div>
-     <!-- Modal -->
-     <div class="modal"> 
-        <div class="modal-background"></div>
+     <!-- Modal Start-->
+     <!-- Modal for "About us" tab -->
+     <div class="modal aboutUsModal"> 
+        <div class="modal-background aboutUsBg"></div>
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">About Us</p>
@@ -102,13 +103,45 @@
                         </p>
                     </div>
                 </div>
-
-
             </section>
             <footer class="modal-card-foot">
                 <button id="exitBtn" class="button">Exit</button>
             </footer>
-        </div>   
+        </div>
+    </div>
+        <!-- Modal for Tickets tab -->
+        <div class="modal ticketsModal">
+            <div class="modal-background ticketsBg"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Tickets</p>
+                    <button id="deleteBtnTickets" class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>Coming Soon! Thanks for your understanding!</p>
+                </section>
+                <footer class="modal-card-foot">
+                    <button id="exitBtnTickets" class="button">Exit</button>
+                </footer>
+            </div>
+        </div>
+        <!-- Modal for Donate tab -->
+            <div class="modal donateModal">
+                <div class="modal-background donateBg"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Donate</p>
+                        <button id="deleteBtnDonate" class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <p>Coming Soon! Thanks for your understanding!</p>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button id="exitBtnDonate" class="button">Exit</button>
+                    </footer>
+                </div>
+            </div>
+        <!-- Modal End -->  
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="Assets/videos.js"></script>
         <script src="./Assets/script.js"></script> 
